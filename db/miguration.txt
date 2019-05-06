@@ -1,0 +1,2 @@
+rails g model user loginid:string, password:string, nickname:string
+ 

@@ -1,0 +1,21 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">POST</h1>
+    <%= form_tag("/posts/create", {multipart: true}) do %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <p>Food menu</p>
+          <textarea name="content"><%= @post.content %></textarea>
+          <p>Photo</p>
+          <input name="image" type="file">
+          <input type="submit" value="Be post">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

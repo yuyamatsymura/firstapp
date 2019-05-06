@@ -1,0 +1,65 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-post-index-item {
+  margin: 60px 0 20px;
+}
+
+.posts-show-item {
+  padding: 30px;
+}
+
+.userimg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #c1ced7;
+  vertical-align: middle;
+}
+
+.cookpic {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 20px 0 10px;
+}
+
+/* posts/index ================================ */
+.posts-index-item {
+  padding: 20px 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #000000;
+}
+
+.post-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #000000;
+  object-fit: cover;
+}
+
+.post-user-name a {
+  font-weight: 600;
+}
+
+.post-user-name a:hover {
+  color: #000000;
+}
+
+.post-left {
+  float: left;
+  width: 10%;
+}
+
+.post-right {
+  float: left;
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+}
+
+p {
+  font-size: 25px;
+}
