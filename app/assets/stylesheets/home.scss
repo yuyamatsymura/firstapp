@@ -41,6 +41,17 @@ form input[type="submit"] {
   clear: both;
 }
 
+body {
+  font-family: 'arial unicode ms';
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 /* header ================================ */
 header {
   height: 50px;
