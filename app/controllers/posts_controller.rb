@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(
+      id:params[:id],
       content: params[:content],
       user_id: @current_user.id,
       pic_name: "default_post.jpg"
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
     if params[:image]
       @post.pic_name = "#{@post.id}.jpg"
       image = params[:image]
-      File.binwrite("public/user_images/#{@post.pic_name}", image.read)
+      File.binwrite("public/user_images/#{@post.pic_name}",image.read)
     end
 
     if @post.save

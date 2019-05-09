@@ -28,14 +28,14 @@
 .posts-index-item {
   padding: 20px 30px;
   overflow: hidden;
-  box-shadow: 0 2px 6px #000000;
+  box-shadow: 0 2px 6px #c1ced7;
 }
 
 .post-left img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px #000000;
+  box-shadow: 0 2px 6px #c1ced7;
   object-fit: cover;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .post-user-name a:hover {
-  color: #000000;
+  color: #c1ced7;
 }
 
 .post-left {
@@ -57,6 +57,11 @@
   width: 90%;
   padding-left: 25px;
   text-align: left;
+}
+
+.user-date {
+  box-shadow: 0 2px 6px #c1ced7;
+  padding: 30px;
 }
 
 p {
