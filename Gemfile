@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# ページネーション
+gem 'kaminari', '~> 0.17.0'
+
 group :development do
   # エラー画面をわかりやすく整形してくれる
   gem 'better_errors'
