@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     end
 
     if @post.save
-      flash[:notice] = "Content posted!!"
+      # flash[:notice] = "Content posted!!"
       redirect_to("/posts/index")
     else
       render("posts/new")
@@ -52,7 +52,7 @@ class PostsController < ApplicationController
     end
 
     if @post.save
-      flash[:notice] = "Content edited"
+      # flash[:notice] = "Content edited"
       redirect_to("/posts/index")
     else
       render("posts/edit")
@@ -62,14 +62,14 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by(id: params[:id])
     @post.destroy
-    flash[:notice] = "Content deleted"
+    # flash[:notice] = "Content deleted"
     redirect_to("/posts/index")
   end
 
   def ensure_correct_user
     @post = Post.find_by(id: params[:id])
     if @post.user_id != @current_user.id
-      flash[:notice] = "You can't access"
+      # flash[:notice] = "You can't access"
       redirect_to("/posts/index")
     end
   end

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       password: params[:password])
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Success signup!!"
+      # flash[:notice] = "Success signup!!"
       redirect_to("/users/#{@user.id}")
     else
       render("users/new")
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     end
 
     if @user.save
-      flash[:notice] = "User edited"
+      # flash[:notice] = "User edited"
       redirect_to("/users/#{@user.id}")
     else
       render("users/edit")
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
-      flash[:notice] = "Login successed"
+      # flash[:notice] = "Login successed"
       redirect_to("/posts/index")
     else
       @error_message = "Wrong address or password"
@@ -70,13 +70,13 @@ class UsersController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    flash[:notice] = "Logout successed"
+    # flash[:notice] = "Logout successed"
     redirect_to("/")
   end
 
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
-      flash[:notice] = "You can't access"
+      # flash[:notice] = "You can't access"
       redirect_to("/posts/index")
     end
   end
